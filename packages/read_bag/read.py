@@ -23,7 +23,6 @@ for topic in topics:
             timestamps.append(time_diff.to_sec())    
             timestampPrev = t
         else:
-            print(222222)
             timestampPrev = t
     timestampsArray = np.array(timestamps)
     
