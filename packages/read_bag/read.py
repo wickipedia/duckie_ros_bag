@@ -5,7 +5,6 @@ import os
 import numpy as np
 
 bag = rosbag.Bag('/data/example_rosbag_H3.bag')
-print("read bag file")
 topics = []
 for topic, msg, t in bag.read_messages():
     if topic not in topics:
@@ -21,9 +20,10 @@ for topic in topics:
         timestamp = t
         if timestampPrev != None:
             time_diff = timestamp - timestampPrev
-            timestamps.append(time_diff)    
+            timestamps.append(time_diff.to_sec())    
             timestampPrev = t
         else:
+            print(222222)
             timestampPrev = t
     timestampsArray = np.array(timestamps)
     
