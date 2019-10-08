@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="convert_bag" type="convert.py" name="convert" output="screen"/>
+
+</launch>

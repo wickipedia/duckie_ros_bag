@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="read_bag" type="read.py" name="read_bag" output="screen"/>
+
+</launch>
